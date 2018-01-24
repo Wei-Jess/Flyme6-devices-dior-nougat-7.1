@@ -643,6 +643,7 @@
     if-eqz v4, :cond_2
 
     :cond_1
+    :goto_flyme_0
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v1

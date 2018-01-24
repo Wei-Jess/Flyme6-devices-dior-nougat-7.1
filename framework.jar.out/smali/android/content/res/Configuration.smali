@@ -1279,6 +1279,13 @@
 
     or-int/2addr v1, v2
 
+    or-int/lit16 v1, v1, 0x4000
+
+    const v0, 0x8000
+
+    or-int/2addr v1, v0
+
+    const/4 v0, 0x0
     and-int/2addr v1, p0
 
     if-eqz v1, :cond_0
