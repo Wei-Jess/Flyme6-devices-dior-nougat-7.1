@@ -416,6 +416,12 @@
 
     move-result-object v11
 
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/android/server/am/ServiceRecord$1;->this$0:Lcom/android/server/am/ServiceRecord;
+
+    invoke-virtual {v1, v11}, Lcom/android/server/am/ServiceRecord;->setFlymeNotificationFlag(Landroid/app/Notification;)V
+    
     .end local v3    # "runningIntent":Landroid/content/Intent;
     .end local v14    # "appName":Ljava/lang/CharSequence;
     .end local v15    # "ctx":Landroid/content/Context;
@@ -555,6 +561,13 @@
     return-void
 
     :cond_3
+    
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/android/server/am/ServiceRecord$1;->this$0:Lcom/android/server/am/ServiceRecord;
+
+    invoke-virtual {v1, v11}, Lcom/android/server/am/ServiceRecord;->setFlymeNotification(Landroid/app/Notification;)V
+    
     const/4 v1, 0x1
 
     :try_start_3
